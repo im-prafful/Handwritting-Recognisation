@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+  <title>SnapØCR | Error Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background-color: #f7f7f7;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+      font-size: 14px;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #2808df;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #23f7f4;
+    }
+
+    .error-message {
+      color: #ff0000;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .success-message {
+      color: #1eed0b;
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Error Report</h1>
+
+  <form>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="subject">Error Type:</label>
+    <input type="text" id="subject" name="subject" required>
+
+    <label for="description">Error:</label>
+    <textarea id="description" name="description" required></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="success-message" class="success-message" style="display: none;">Bug report submitted successfully!</div>
+
+  <script>
+    const form = document.querySelector('form');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      
+      setTimeout(() => {
+        form.reset();
+        successMessage.style.display = 'block';
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+        }, 3000);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>SnapØCR</title>
+</head>
+
+<body onload="slider()">
+    <div class="main-conatiner">
+        <div class="banner">
+            <div class="slider">
+                <img id="slideImg" src="/static/images/slider1.jpeg" alt="">
+            </div>
+            <div class="overlay">
+                <div class="navbox flex-center">
+                    <div class="logo-box">
+                        <img src="/static/images/logo.png" alt="">
+                    </div>
+                    <div class="login-box flex-center">
+                        <div class="login flex-center">
+                            <a href="/login">
+                                <h1>LOGIN</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>LET'S <span>EXTRACT</span> DATA</h1>
+                    <h3>
+                        A sophisticated data extraction system utilising advanced machine learning algorithms
+                        and optical character recognition technology to automate the process of extracting
+                        structured and unstructured data from a variety of forms
+                    </h3>
+                    <div class="btn">
+                        <a href="#reference1"><button class="btn-1" type="button">Text Recognisation</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pages page2 flex-center">
+            <div class="tagcloudTexts"></div>
+            <div class="p2img2-box">
+                <img src="/static/images/TextLogo.png" alt="image not found" class="p2img2">
+            </div>
+            <div class="p2content">
+                <p id="reference1">SIMPLE AND EFFICIENT WAY TO <span class="p2contentred">RECOGNIZE</span> YOUR
+                    HANDWRITING AND
+                    <span class="p2contentred">EXTRACT</span> THE DATA IN THE FORM OF TEXT DOCUMENT
+                </p>
+            </div>
+
+        </div>
+        <div class="pages page3 flex-center">
+            <div class="dropbox-container">
+                <div class="p3head">
+                    <h1>UPLOAD THE HANDWRITTEN DOCUMENTS HERE</h1>
+                </div>
+                <div class="dropbox flex-center">
+                    <div class="upload-logo">
+                        <form action="process_image" method="post" enctype="multipart/form-data">
+                            <input class="file-input" type="file" name="file" accept="image/*" hidden>
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </form>
+                        <section class="progress-area"></section>
+                        <section class="uploaded-area"></section>
+                    </div>
+                    <p class="uploadText">BROWSE FILE TO UPLOAD OR DROP HERE</p>
+                    <video autoplay muted loop id="myVideo">
+                        <source src="/static/images/write.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="display_string">
+                <p id="result"></p>
+            </div>
+
+            <div class="downloadPage flex-center">
+                <div class="download-box flex-center">
+                    <h1>DATA EXTRACTION RESULT</h1>
+                    <div class="download-button flex-center">
+                        <h3>DOWNLOAD PDF</h3>
+                        <i class="ri-download-2-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pages page4 flex-center">
+            <div class="footer-box1 footer-boxes">
+                <ul class="ul1">
+                    <h3>Lisense and Terms</h3>
+                    <li><a href="/terms">Terms of Services</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                    <li><a href="/cookies">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footer-box2 footer-boxes">
+                <ul class="ul2">
+                    <h3>How to Use</h3>
+                    <li><a href="/getting_started">Getting Started</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-box3 footer-boxes">
+                <ul class="ul3">
+                    <h3>Bug & Error Report</h3>
+                    <li><a href="/bug">Report a Bug</a></li>
+                    <li><a href="/error">Report an Error</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="page5 flex-center">
+            <h3>Report an Issue</h3>
+            <input type="text" placeholder="Type your issue...">
+            <button class="send-button flex-center">
+                <h3>SEND</h3>
+            </button>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/static/scripts/script.js"></script>
+
+</body>
+
+</html>
